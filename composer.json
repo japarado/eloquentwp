@@ -1,0 +1,25 @@
+{
+    "name": "pam/eloquentwp",
+    "description": "Prepared database models for the WordPress schema",
+    "require": {
+        "illuminate/database": "^5.8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jparado",
+            "email": "fishbonesandzap@gmail.com"
+        }
+    ],
+    "config": {
+        "optimize-autoloader": true
+    },
+    "autoload": {
+        "psr-4": {
+            "EloquentWP\\" : "src/"
+        }
+    }
+}
