@@ -13,7 +13,7 @@ class EloquentWP
     public static $password = '';
     public static $charset = 'utf8';
     public static $collation = 'utf8_unicode_ci';
-    public static $prefix = '_wp';
+    public static $prefix = 'wp_';
 
     public static function bootstrap()
     {
