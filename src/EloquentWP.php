@@ -6,19 +6,26 @@ use Illuminate\Database\Capsule\Manager as Capsule;
 
 class EloquentWP
 {
-    public static $prefix = 'wp_';
+    const DRIVER = 'mysql';
+    public static $host = 'localhost';
+    public static $database;
+    public static $username = 'root';
+    public static $password = '';
+    public static $charset = 'utf8';
+    public static $collation = 'utf8_unicode_ci';
+    public static $prefix = '_wp';
 
     public static function bootstrap()
     {
         $capsule = new Capsule();
         $capsule->addConnection([
             'driver' => 'mysql',
-            'host' => defined('DB_HOST') ? DB_HOST : 'localhost',
-            'database' => defined('DB_NAME') ?  DB_NAME : 'jnr',
-            'username' => defined('DB_USER') ? DB_USER : 'root',
-            'password' => defined('DB_PASSWORD') ? DB_PASSWORD : '',
-            'charset' => defined('DB_CHARSET') ? DB_CHARSET : 'utf8',
-            'collation' => defined('DB_COLLATION') ? DB_COLLATION : 'utf8_unicode_ci',
+            'host' => defined('DB_HOST') ? DB_HOST : static::$host,
+            'database' => defined('DB_NAME') ?  DB_NAME : static::$database,
+            'username' => defined('DB_USER') ? DB_USER : static::$username,
+            'password' => defined('DB_PASSWORD') ? DB_PASSWORD : static::$password,
+            'charset' => defined('DB_CHARSET') ? DB_CHARSET : static::$charset,
+            'collation' => defined('DB_COLLATION') ? DB_COLLATION : static::$collation,
             'prefix' => static::$prefix
         ]);
 
