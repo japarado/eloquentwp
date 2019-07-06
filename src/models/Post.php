@@ -2,15 +2,16 @@
 
 namespace EloquentWP\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use EloquentWP\Models\WPModel;
 use EloquentWP\Models\Postmeta;
 use EloquentWP\Models\Comment;
 use EloquentWP\Models\User;
 
-class Post extends Model
+class Post extends WPModel
 {
     protected $table = 'posts';
     protected $primaryKey = 'ID';
+    public $timestamps = false;
 
     public function postmeta()
     {

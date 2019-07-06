@@ -2,11 +2,12 @@
 
 namespace EloquentWP\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use EloquentWP\Models\WPModel;
 
-class Option extends Model
+class Option extends WPModel
 {
     protected $table = 'options';
+    public $timestamps = false;
     protected $primaryKey = 'option_id';
 }
 

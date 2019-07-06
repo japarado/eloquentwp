@@ -2,13 +2,14 @@
 
 namespace EloquentWP\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use EloquentWP\Models\WPModel;
 use EloquentWP\Models\Term;
 
-class Termmeta extends Model
+class Termmeta extends WPModel
 {
     protected $table = 'termmeta';
     protected $primaryKey = 'meta_id';
+    public $timestamps = false;
 
     public function term()
     {

@@ -2,11 +2,11 @@
 
 namespace EloquentWP\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use EloquentWP\Models\WPModel;
 use EloquentWP\Models\Post;
 use EloquentWP\Models\Commentmeta;
 
-class Comment extends Model
+class Comment extends WPModel
 {
     protected $table = 'comments';
     protected $primaryKey = 'comment_ID';

@@ -4,12 +4,13 @@ namespace EloquentWP\Models;
 
 use EloquentWP\Models\Termmeta;
 use EloquentWP\Models\TermTaxonomy;
-use Illuminate\Database\Eloquent\Model;
+use EloquentWP\Models\WPModel;
 
-class Term extends Model 
+class Term extends WPModel 
 {
     protected $table = 'terms';
     protected $primaryKey = 'term_id';
+    public $timestamps = false;
 
     public function termmeta()
     {

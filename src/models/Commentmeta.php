@@ -2,13 +2,14 @@
 
 namespace EloquentWP\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use EloquentWP\Models\WPModel;
 use EloquentWP\Models\Comment;
 
-class Commentmeta extends Model
+class Commentmeta extends WPModel
 {
     protected $table = 'commentmeta';
     protected $primaryKey = 'meta_id' ;
+    public $timestamps = false;
 
     public function comment()
     {

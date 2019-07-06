@@ -2,13 +2,14 @@
 
 namespace EloquentWP\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use EloquentWP\Models\WPModel;
 use EloquentWP\Models\User;
 
-class Usermeta extends Model
+class Usermeta extends WPModel
 {
     protected $table = 'usermeta';
     protected $primaryKey = 'umeta_id';
+    public $timestamps = false;
 
     public function user()
     {

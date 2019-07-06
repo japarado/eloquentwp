@@ -2,10 +2,11 @@
 
 namespace EloquentWP\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use EloquentWP\Models\WPModel;
 
-class TermRelationship extends Model
+class TermRelationship extends WPModel
 {
     protected $table = 'term_relationships';
     protected $primaryKey = 'object_id';
+    public $timestamps = false;
 }

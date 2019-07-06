@@ -2,13 +2,14 @@
 
 namespace EloquentWP\Models;
 
+use EloquentWP\Models\WPModel;
 use EloquentWP\Models\Term;
-use Illuminate\Database\Eloquent\Model;
 
-class TermTaxonomy extends Model
+class TermTaxonomy extends WPModel
 {
     protected $table = 'term_taxonomy';
     protected $primaryKey = 'term_taxonomy_id';
+    public $timestamps = false;
 
     public function term()
     {
